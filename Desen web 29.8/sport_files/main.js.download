@@ -1,0 +1,198 @@
+
+$(document).ready(function(){
+	
+	$('.bt-voltar').click(function(){
+		history.back();
+	});
+	
+	$('.eventos-topo-voltar').click(function(){
+		history.back();
+	});
+    
+	$('.fancy').fancybox({ padding:0 });
+    
+    $('.fancyframe').fancybox({
+      padding : 0,
+      type:"iframe"
+	});
+	
+	$(".div01-mobile-btmenu").click(function(){
+		$(".div01-mobile-menu").slideToggle();
+	});
+   	
+});
+
+
+
+function checarCPF(cpf){
+
+	cpf = cpf.replace(/[^\d]+/g,'');
+ 
+    if(cpf==""){ return false; }
+    if(cpf.length!=11 || cpf=="00000000000" || cpf=="11111111111" || cpf=="22222222222" || cpf=="33333333333" || cpf=="44444444444" || cpf=="55555555555" || cpf=="66666666666" || cpf=="77777777777" || cpf=="88888888888" || cpf=="99999999999"){ return false; }
+     
+    // Valida 1o digito
+    add = 0;
+    for (i=0; i < 9; i ++)
+        add += parseInt(cpf.charAt(i)) * (10 - i);
+    rev = 11 - (add % 11);
+    if (rev == 10 || rev == 11)
+        rev = 0;
+    if (rev != parseInt(cpf.charAt(9)))
+        return false;
+     
+    // Valida 2o digito
+    add = 0;
+    for (i = 0; i < 10; i ++)
+        add += parseInt(cpf.charAt(i)) * (11 - i);
+    rev = 11 - (add % 11);
+    if (rev == 10 || rev == 11)
+        rev = 0;
+    if (rev != parseInt(cpf.charAt(10)))
+        return false;
+         
+    return true;
+
+}
+
+function checarCNPJ(cnpj){
+
+	cnpj = cnpj.replace(/[^\d]+/g,'');
+ 
+    if(cnpj == '') return false;
+     
+    if (cnpj.length != 14)
+        return false;
+ 
+    if (cnpj == "00000000000000" || 
+        cnpj == "11111111111111" || 
+        cnpj == "22222222222222" || 
+        cnpj == "33333333333333" || 
+        cnpj == "44444444444444" || 
+        cnpj == "55555555555555" || 
+        cnpj == "66666666666666" || 
+        cnpj == "77777777777777" || 
+        cnpj == "88888888888888" || 
+        cnpj == "99999999999999")
+        return false;
+         
+    // Valida DVs
+    tamanho = cnpj.length - 2
+    numeros = cnpj.substring(0,tamanho);
+    digitos = cnpj.substring(tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (i = tamanho; i >= 1; i--) {
+      soma += numeros.charAt(tamanho - i) * pos--;
+      if (pos < 2)
+            pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+    if (resultado != digitos.charAt(0))
+        return false;
+         
+    tamanho = tamanho + 1;
+    numeros = cnpj.substring(0,tamanho);
+    soma = 0;
+    pos = tamanho - 7;
+    for (i = tamanho; i >= 1; i--) {
+      soma += numeros.charAt(tamanho - i) * pos--;
+      if (pos < 2)
+            pos = 9;
+    }
+    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+    if (resultado != digitos.charAt(1))
+          return false;
+           
+    return true;
+
+}
+	
+function checaEmail(email){
+	if(email=='' || email.indexOf(' ', 0) != -1 || email.indexOf('@', 0) == -1 || email.indexOf('.', 0) == -1){
+		return false;
+	}else{
+		return true;
+	}
+}
+
+function checarTelefone(telefone){
+	var partes = telefone.split(') ');
+	var ddd = partes[0].split('(');
+	var numeros = partes[1];
+	var ddd_valido = 0;
+	var telefone_valido = 0;
+	
+	if(ddd[1]=='11'){ ddd_valido=1; }
+	if(ddd[1]=='12'){ ddd_valido=1; }
+	if(ddd[1]=='13'){ ddd_valido=1; }
+	if(ddd[1]=='14'){ ddd_valido=1; }
+	if(ddd[1]=='15'){ ddd_valido=1; }
+	if(ddd[1]=='16'){ ddd_valido=1; }
+	if(ddd[1]=='17'){ ddd_valido=1; }
+	if(ddd[1]=='18'){ ddd_valido=1; }
+	if(ddd[1]=='19'){ ddd_valido=1; }
+	if(ddd[1]=='21'){ ddd_valido=1; }
+	if(ddd[1]=='22'){ ddd_valido=1; }
+	if(ddd[1]=='24'){ ddd_valido=1; }
+	if(ddd[1]=='27'){ ddd_valido=1; }
+	if(ddd[1]=='28'){ ddd_valido=1; }
+	if(ddd[1]=='31'){ ddd_valido=1; }
+	if(ddd[1]=='32'){ ddd_valido=1; }
+	if(ddd[1]=='33'){ ddd_valido=1; }
+	if(ddd[1]=='34'){ ddd_valido=1; }
+	if(ddd[1]=='35'){ ddd_valido=1; }
+	if(ddd[1]=='37'){ ddd_valido=1; }
+	if(ddd[1]=='38'){ ddd_valido=1; }
+	if(ddd[1]=='41'){ ddd_valido=1; }
+	if(ddd[1]=='42'){ ddd_valido=1; }
+	if(ddd[1]=='43'){ ddd_valido=1; }
+	if(ddd[1]=='44'){ ddd_valido=1; }
+	if(ddd[1]=='45'){ ddd_valido=1; }
+	if(ddd[1]=='46'){ ddd_valido=1; }
+	if(ddd[1]=='47'){ ddd_valido=1; }
+	if(ddd[1]=='48'){ ddd_valido=1; }
+	if(ddd[1]=='49'){ ddd_valido=1; }
+	if(ddd[1]=='51'){ ddd_valido=1; }
+	if(ddd[1]=='53'){ ddd_valido=1; }
+	if(ddd[1]=='54'){ ddd_valido=1; }
+	if(ddd[1]=='55'){ ddd_valido=1; }
+	if(ddd[1]=='61'){ ddd_valido=1; }
+	if(ddd[1]=='62'){ ddd_valido=1; }
+	if(ddd[1]=='63'){ ddd_valido=1; }
+	if(ddd[1]=='64'){ ddd_valido=1; }
+	if(ddd[1]=='65'){ ddd_valido=1; }
+	if(ddd[1]=='66'){ ddd_valido=1; }
+	if(ddd[1]=='67'){ ddd_valido=1; }
+	if(ddd[1]=='68'){ ddd_valido=1; }
+	if(ddd[1]=='69'){ ddd_valido=1; }
+	if(ddd[1]=='71'){ ddd_valido=1; }
+	if(ddd[1]=='73'){ ddd_valido=1; }
+	if(ddd[1]=='74'){ ddd_valido=1; }
+	if(ddd[1]=='75'){ ddd_valido=1; }
+	if(ddd[1]=='77'){ ddd_valido=1; }
+	if(ddd[1]=='79'){ ddd_valido=1; }
+	if(ddd[1]=='81'){ ddd_valido=1; }
+	if(ddd[1]=='82'){ ddd_valido=1; }
+	if(ddd[1]=='83'){ ddd_valido=1; }
+	if(ddd[1]=='84'){ ddd_valido=1; }
+	if(ddd[1]=='85'){ ddd_valido=1; }
+	if(ddd[1]=='86'){ ddd_valido=1; }
+	if(ddd[1]=='87'){ ddd_valido=1; }
+	if(ddd[1]=='88'){ ddd_valido=1; }
+	if(ddd[1]=='89'){ ddd_valido=1; }
+	if(ddd[1]=='91'){ ddd_valido=1; }
+	if(ddd[1]=='92'){ ddd_valido=1; }
+	if(ddd[1]=='93'){ ddd_valido=1; }
+	if(ddd[1]=='94'){ ddd_valido=1; }
+	if(ddd[1]=='95'){ ddd_valido=1; }
+	if(ddd[1]=='96'){ ddd_valido=1; }
+	if(ddd[1]=='97'){ ddd_valido=1; }
+	if(ddd[1]=='98'){ ddd_valido=1; }
+	if(ddd[1]=='99'){ ddd_valido=1; }
+
+	if(ddd_valido==0){ return false; }
+	if(numeros[0]==numeros[1] && numeros[0]==numeros[2] && numeros[0]==numeros[3] && numeros[0]==numeros[5] && numeros[0]==numeros[6] && numeros[0]==numeros[7] && numeros[0]==numeros[8]){ return false; }
+	
+	return true;
+}

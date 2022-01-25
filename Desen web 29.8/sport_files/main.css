@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+html														{ border:0; margin:0px; padding:0px; width:100%; min-height:100%; overflow:auto; }
+body														{ border:0px; margin:0px; padding:0px; width:100%; min-height:100%; font-family:'Montserrat', sans-serif; font-weight:400px; font-size:13px; background: top center no-repeat #FFF; }
+img, div, input, select, textarea							{ border:0; margin:0px; padding:0px; outline:0px; }
+a															{ text-decoration:none; }
+
+a[href^=tel]{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.bt-voltar													{ margin-left:20px; border:1px solid #FFF; background:#197fc6; color:#FFF; padding:6px 30px; float:right; margin-top:30px; cursor:pointer; }
+.bt-voltar:hover											{ background:#FFF; color:#197fc6; border-color:#197fc6; }
+
+.centralizar												{ width:1100px; margin:0px auto; }
+
+.paginacao													{ width:340px; margin:0px auto; height:100px; margin-top:30px; }
+.paginacao-indice											{ margin:0px 120px; border:1px solid #CCC; padding:5px 0px; text-align:center; font-size:13px; color:#777; }
+.paginacao-anterior-ativo									{ width:100px; float:left; font-size:15px; color:#23327d; padding:5px 0px; text-align:left; }
+.paginacao-anterior-ativo:hover								{ text-decoration:underline; }
+.paginacao-anterior-desativado								{ width:100px; float:left; font-size:15px; color:#777; padding:5px 0px; text-align:left; }
+.paginacao-proximo-ativo									{ width:100px; float:right; font-size:15px; color:#23327d; padding:5px 0px; text-align:right; }
+.paginacao-proximo-ativo:hover								{ text-decoration:underline; }
+.paginacao-proximo-desativado								{ width:100px; float:right; font-size:15px; color:#777; padding:5px 0px; text-align:right; }
+
+.campo														{ margin-bottom:10px; float:left; }
+.campo label												{ display:block; padding:0px 0px 0px 0px; font-size:14px; font-weight:700; }
+.campo input[type=text]										{ border:1px solid #CCC; background:#FFF; padding:7px 5px; font-size:15px; font-family:'Montserrat', sans-serif; font-weight:400; float:left; color:#000; width:calc(100% - 20px); }
+.campo select												{ border:1px solid #CCC; background:#FFF; padding:7px 5px; font-size:15px; font-family:'Montserrat', sans-serif; font-weight:400; float:left; color:#000; width:calc(100% - 8px); height:40px; }
+.campo textarea												{ border:1px solid #CCC; background:#FFF; padding:7px 5px; font-size:15px; font-family:'Montserrat', sans-serif; font-weight:400; float:left; color:#000; width:calc(100% - 20px); }
+.campo-botao												{ border:1px solid #FFF; background:#197fc6; color:#FFF; padding:10px 30px; float:left; font-size:15px; cursor:pointer; }
+.campo-botao:hover											{ border:1px solid #197fc6; background:#FFF; color:#197fc6; }
+
+.mensagem_obrigado											{ text-align:center; padding:120px 0px 140px 0px; }
+.mensagem_obrigado h3										{ font-family:'Montserrat', sans-serif; font-weight:400; font-size:24px; color:#77B522; text-transform:uppercase; }
+.mensagem_obrigado p										{ font-family:'Montserrat', sans-serif; text-align:center; font-size:13px; color:#777; }
+
+.botoes-lateral												{ width:50px; position:fixed; right:0px; top:140px; z-index:999; }
+.botoes-lateral-imagem										{ display:block; float:left; margin-bottom:1px; }
+.botoes-lateral-item										{ width:50px; height:50px; }
+.botoes-lateral-item:hover									{ width:230px; margin-left:-170px; }
+.botoes-lateral-item-label									{ padding:16px 10px 10px 60px; color:#FFF; text-transform:uppercase; }
+
+.div01-mobile-btmenu										{ display:none; }
+.div01-mobile-menu											{ display:none; }
+
+.div01														{ position:absolute; top:30px; left:0px; z-index:999; width:100%; height:100px; background:url(../images/002.png) center center no-repeat; }
+.div01-mlbrasil												{ margin:-20px 0px 0px 64px; width:150px;  }
+.div01-logo													{ float:left; }
+.div01-home													{ float:left; color:#999; margin:36px 0px 0px 96px; font-size:20px; }
+.div01-contato												{ float:left; color:#f73f60; margin:38px 0px 0px 20px; font-size:16px; }
+.div01-menu													{ float:right; }
+.div01-menu a												{ color:#FFF; }
+.div01-menu ul												{ margin:0px; padding:0px; list-style:none; }
+.div01-menu li												{ margin:0px; padding:0px; list-style:none; min-width:10px; float:left; color:#FFF; text-transform:uppercase; font-size:15px; padding:40px 0px 38px 18px; cursor:pointer; }
+.div01-menu li:hover										{ color:#fcfb49; text-decoration:none; }
+.div01-menu li ul											{ display:none; }
+.div01-menu li ul a											{ font-size:13px; }
+.div01-menu li:hover ul										{ display:block; position:absolute; background:#53924d; border:1px solid #53924d; margin:20px 0px 0px -10px; z-index:99; }
+.div01-menu li:hover ul li									{ float:none; padding:5px 10px; text-align:left; }
+.div01-menu li:hover ul li:hover							{ background:#407C3C; }
+
+.div02														{ min-height:800px; }
+
+.div03														{ background:#404040; color:#FFF; padding:10px 0px; }
+/*.div03-unidade												{ width:calc(25% - 20px); float:left; margin:10px; }*/
+.div03-unidade												{ width:calc(33.333% - 20px); float:left; margin:10px; }
+.div03-unidade-titulo										{ font-size:16px; color:#FFF; font-weight:600; text-transform:uppercase; padding-bottom:5px; }
+.div03-unidade-texto										{ font-size:12px; color:#FFF; }
+.div03-unidade-texto-whatsapp								{ background:url(../images/whatsapp.png) left center no-repeat; background-size:16px; padding:0px 0px 0px 20px; display:block; margin-top:3px; }
+
+.div04														{ background:#555555; padding:20px 0px; }
+.div04 h3													{ font-size:15px; color:#FFF; font-weight:600; text-transform:uppercase; margin:0px; padding:0px; padding-bottom:5px; }
+.div04 a													{ color:#FFF; }
+.div04 a:hover												{ text-decoration:underline; }
+.div04-coluna1												{ width:140px; height:180px; float:left; padding:20px; border-right:1px solid #999; margin-right:10px; }
+.div04-coluna2												{ width:100px; height:180px; float:left; padding:20px; border-right:1px solid #999; margin-right:10px; }
+.div04-coluna3												{ width:150px; height:180px; float:left; padding:20px; border-right:1px solid #999; margin-right:10px; }
+.div04-coluna4												{ width:100px; height:180px; float:left; padding:20px; border-right:1px solid #999; margin-right:10px; }
+.div04-coluna4-botao										{ width:20px; height:20px; background:#404040; text-align:center; color:#FFF; margin:5px; float:left; font-size:15px; padding:5px; border-radius:5px; }
+.div04-coluna4-lateral										{ display:none; }
+.div04-coluna5												{ width:380px; float:right; text-align:center; }
+.div04-coluna5 img											{ margin-top:0px; margin-bottom:10px; }
+.div04-coluna5-texto										{ font-size:14px; color:#FFF; margin-top:10px; }
+.div04-coluna5-newsletter									{ font-size:14px; color:#FFF; margin-top:10px; font-weight:bold; margin-bottom:5px; }
+.div04-coluna5 input[type=text]								{ padding:5px; width:200px; background:#FFFFFF; border:0px; }
+.div04-coluna5 input[type=submit]							{ padding:5px; width:80px; background:#53924d; border:0px; color:#FFF; }
+
+
+.modal-formulario											{ padding:30px; background:#FFF; }
+.modal-formulario h1										{ text-align:center; margin:0px; padding:0px; font-size:25px; color:#1b1b1b; margin:10px 0px 20px 0px; line-height:36px; }
+.modal-formulario input[type=text]							{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:10px; width:calc(100% - 40px); font-size:14px; color:#000; outline:none; margin:0px 10px 10px 10px; display:block; }
+.modal-formulario select									{ border:1px solid #CCC; background:#FFF; padding:7px 5px; font-size:15px; font-family:'Montserrat', sans-serif; font-weight:400; float:left; color:#000; width:calc(100% - 18px); height:40px; margin:0px 10px 10px 10px; }
+.modal-formulario textarea									{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:10px; width:calc(100% - 40px); font-size:14px; color:#000; outline:none; margin:0px 10px 10px 10px; display:block; height:80px; }
+.modal-formulario input[type=submit]						{ border:1px solid #136; border-radius:0px; background:#136; padding:15px 10px; width:calc(100% - 20px); font-size:14px; color:#FFF; outline:none; margin:0px 10px 10px 10px; background:#73c04e; border-color:#73c04e; }
+.modal-formulario-obs										{ padding:15px; text-align:center; }
+.modal-formulario-obrigado									{ padding:50px 20px; }
+.modal-formulario-obrigado h3								{ text-align:center; font-size:28px; color:#73c04e; text-transform:uppercase; }
+.modal-formulario-obrigado p								{ text-align:center; font-size:15px; color:#777; }
+
+
+.home-banner												{ height:780px; background:#000; overflow:hidden; }
+.home-banner ul												{ margin:0px; padding:0px; list-style:none; }
+.home-banner li												{ margin:0px; padding:0px; list-style:none; }
+.home-banner-item											{ height:780px; background:center center no-repeat; background-size:cover; padding-top:1px; }
+.home-banner-item-texto										{ width:440px; height:230px; background:url(../images/003.png) center center no-repeat; font-size:45px; color:#fcfb49; text-transform:uppercase; margin-top:240px; padding:80px 0px 0px 180px; }
+.home-banner-item-texto span								{ display:block; font-size:23px; color:#FFF; display:block; }
+.home-banner-item-obs										{ background-color:rgba(0,0,0,0.3); padding:20px 0px; color:#FFF; font-size:12px; margin-top:94px; }
+.home-banner-item-obs b										{ text-transform:uppercase; color:#f73f60; }
+.home-banner .bx-prev										{ width:25px !important; height:35px !important; background:url(../images/017.png) center center !important; }
+.home-banner .bx-next										{ width:25px !important; height:35px !important; background:url(../images/018.png) center center !important; }
+
+
+.home-bloco1												{ height:480px; background:url(../images/007.png) center center no-repeat #FFF; padding-top:10px; }
+.home-bloco1-imagem											{ float:right; margin-top:80px; }
+.home-bloco1-video											{ float:right; margin-top:80px; }
+.home-bloco1-info											{ float:left; width:440px; }
+.home-bloco1-info-titulo									{ font-size:35px; color:#f73f60; text-transform:uppercase; padding:50px 0px 30px 0px; }
+.home-bloco1-info-texto										{ font-size:15px; color:#9b9da0; padding-bottom:20px; }
+.home-bloco1-info-botao										{ width:180px; height:31px; float:right; font-size:15px; text-transform:uppercase; padding-top:9px; background:url(../images/011.png) center center no-repeat; text-align:center; color:#FFF; }
+		
+.home-bloco2												{ height:720px; background:url(../images/008.png) center center no-repeat #9b9da0; text-align:center; }
+.home-bloco2-titulo											{ font-size:35px; color:#555555; padding:80px 0px 20px 0px; }
+.home-bloco2 img											{  }
+.home-bloco2-mobile											{ display:none; }
+
+.home-bloco3												{ height:1095px; background:url(../images/009.png) center center no-repeat #FFF; margin-bottom:1px; }
+.home-bloco3-titulo											{ font-size:35px; color:#555555; padding:20px 0px 0px 0px; text-align:left; }
+.home-bloco3-eventos										{ width:calc(50% - 10px); float:left; padding-top:50px; }
+.home-bloco3-eventos .eventos-lista-item-imagem				{ height:130px; }
+.home-bloco3-video											{ width:calc(50% - 10px); float:right; padding-top:50px; }
+.home-bloco3-video iframe									{ margin-top:16px; }
+
+.home-bloco4												{ height:300px; background:url(../images/home_03.png) center center no-repeat #FFF; text-align:center; }
+.home-bloco4-mobile											{ display:none; }
+
+.home-bloco4-fundo2											{ height:300px; background:url(../images/home_03_2.png) center center no-repeat #FFF; text-align:center; }
+
+.home-bloco4-planos											{  }
+.home-bloco4-planos-titulo									{ width:80px; height:100px; padding-top:200px; float:left; color:#FFF; border-left:1px solid #FFF; border-right:1px solid #FFF; margin-left:-1px; overflow:hidden; font-size:20px; cursor:pointer; }
+.home-bloco4-planos-titulo p								{ -moz-transform: rotate(270deg); -o-transform: rotate(270deg); -webkit-transform: rotate(270deg); transform: rotate(270deg); margin-bottom:-100px }
+.home-bloco4-planos-texto									{ display:none; width:360px; height:300px; float:left; background:#ebebeb; text-align:left; font-size:15px; }
+.home-bloco4-planos-texto-botao								{ width:120px; margin-top:30px; color:#FFF; text-align:center; padding:10px 0px; }
+.home-bloco4-planos-texto-info								{ padding:40px; }
+
+.home-bloco5												{ padding:60px 0px; }
+.home-bloco5-titulo											{ font-size:35px; color:#555555; padding:20px 0px 0px 0px; text-align:center; }
+.home-bloco5-item											{ height:300px; background:center center no-repeat; }
+.home-bloco5 .bx-prev										{ width:25px !important; height:35px !important; background:url(../images/017.png) center center !important; left:-40px !important; }
+.home-bloco5 .bx-next										{ width:25px !important; height:35px !important; background:url(../images/018.png) center center !important; right:-40px !important; }
+
+.careclub-topo												{ height:340px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.careclub-topo-titulo										{ padding:20px 100px 20px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; }
+
+.careclub-comecou											{ height:410px; background:url(../images/013.jpg) center center no-repeat #53924d; padding-top:10px; }
+.careclub-comecou-info										{  }
+.careclub-comecou-info										{ float:right; width:440px; }
+.careclub-comecou-info-titulo								{ font-size:35px; color:#FFF; text-transform:uppercase; padding:40px 0px 20px 0px; }
+.careclub-comecou-info-texto								{ font-size:15px; color:#FFF; padding-bottom:20px; }
+
+.careclub-proposta											{ height:480px; background:url(../images/007.png) center center no-repeat #FFF; padding-top:10px; }
+.careclub-proposta-imagem									{ float:right; margin-top:80px; }
+.careclub-proposta-video									{ float:right; margin-top:80px; }
+.careclub-proposta-info										{ float:left; width:440px; }
+.careclub-proposta-info-titulo								{ font-size:35px; color:#f73f60; text-transform:uppercase; padding:60px 0px 30px 0px; }
+.careclub-proposta-info-texto								{ font-size:15px; color:#9b9da0; padding-bottom:20px; }
+
+.careclub-espaco											{ background:#9b9da0; padding:50px 0px; }
+.careclub-espaco-info										{ width:320px; float:left; }
+.careclub-espaco-info-titulo								{ font-size:35px; color:#555; text-transform:uppercase; padding:0px 0px 30px 0px; }
+.careclub-espaco-info-texto									{ font-size:15px; color:#FFF; padding-bottom:20px; }
+.careclub-espaco-unidade1									{ width:400px; height:94px; background:url(../images/014.png) center center no-repeat; float:right; padding:30px 0px 0px 340px; margin:10px 0px; }
+.careclub-espaco-unidade1-titulo							{ color:#FFF; font-size:24px; }
+.careclub-espaco-unidade1-texto								{ color:#FFF; font-size:14px; }
+.careclub-espaco-unidade2									{ width:400px; height:94px; background:url(../images/015.png) center center no-repeat; float:right; padding:30px 0px 0px 340px; margin:10px 0px; }
+.careclub-espaco-unidade2-titulo							{ color:#FFF; font-size:24px; }
+.careclub-espaco-unidade2-texto								{ color:#FFF; font-size:14px; }
+.careclub-espaco-unidade3									{ width:400px; height:94px; background:url(../images/021.png) center center no-repeat; float:right; padding:30px 0px 0px 340px; margin:10px 0px; }
+.careclub-espaco-unidade3-titulo							{ color:#FFF; font-size:24px; }
+.careclub-espaco-unidade3-texto								{ color:#FFF; font-size:14px; }
+
+.careclub-depoimentos										{ padding:50px 0px; }
+.careclub-depoimentos-titulo								{ font-size:35px; color:#555; text-transform:uppercase; padding:0px 0px 30px 0px; text-align:center; }
+.careclub-depoimentos ul									{ padding:0px; margin:0px; list-style:none; }
+.careclub-depoimentos li									{ padding:0px; margin:0px; list-style:none; }
+.careclub-depoimentos .bx-prev								{ width:25px !important; height:35px !important; background:url(../images/017.png) center center !important; left:-50px !important; }
+.careclub-depoimentos .bx-next								{ width:25px !important; height:35px !important; background:url(../images/018.png) center center !important; right:-50px !important; }
+.careclub-depoimentos-item									{ padding:20px; background:url(../images/016.png) left top no-repeat; }
+.careclub-depoimentos-item-texto							{ font-style:italic; font-size:15px; }
+.careclub-depoimentos-item-nome								{ font-style:italic; font-size:18px; font-weight:600; padding-top:10px; }
+
+
+.especialidade-topo											{ min-height:430px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.especialidade-topo a										{ color:#FFF; }
+.especialidade-topo a:hover										{ color:#FFF; text-decoration:underline; }
+.especialidade-topo-titulo									{ padding:20px 100px 20px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; }
+.especialidade-topo-titulo span								{ font-size:14px; color:#53924d; font-weight:600; }
+.especialidade-topo-texto									{ font-size:15px; color:#FFF; width:500px; float:left; padding:40px 60px; }
+.especialidade-topo-botao									{ background:#73c04e; text-align:center; padding:15px 30px; color:#FFF; text-transform:uppercase; cursor:pointer; float:right; margin:-100px 20px 0px 0px; font-weight:bold; font-size:17px; }
+
+.especialidade-profissionais								{ padding:50px 0px; }
+.especialidade-profissionais-titulo							{ font-size:35px; color:#555; text-transform:uppercase; padding:0px 0px 30px 0px; text-align:center; }
+
+.especialidade-profissionais-item							{ width:calc(25% - 40px); margin:20px; float:left; color:#333; }
+.especialidade-profissionais-item-imagem					{ height:240px; background:center center no-repeat #555; background-size:cover; }
+.especialidade-profissionais-item-nome						{ font-size:20px; line-height:20px; padding:10px 0px; }
+.especialidade-profissionais-item-nome span					{ font-size:14px; color:#f73f60; }
+.especialidade-profissionais-item-formacao					{ font-size:14px; }
+
+.especialidade-profissionais-item1													{ width:calc(100% - 40px); }
+.especialidade-profissionais-item1 .especialidade-profissionais-item-imagem			{ width:400px; height:300px; float:left; background:center center no-repeat #555; background-size:cover; }
+.especialidade-profissionais-item1 .especialidade-profissionais-item-nome			{ font-size:20px; line-height:20px; padding:10px 0px; margin-left:430px; }
+.especialidade-profissionais-item1 .especialidade-profissionais-item-nome span		{ font-size:14px; color:#f73f60; }
+.especialidade-profissionais-item1 .especialidade-profissionais-item-formacao		{ font-size:14px; margin-left:430px; }
+
+.especialidade-youtube-2									{ width:calc(50% - 20px); margin:10px; float:left; }
+.especialidade-youtube-3									{ width:calc(33.333% - 20px); margin:10px; float:left; }
+
+.especialista-topo											{ height:340px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.especialista-topo-titulo									{ padding:20px 100px 20px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; }
+
+.especialista-interna										{ padding:40px 0px; }
+.especialista-interna-imagem								{ width:400px; float:left; }
+.especialista-interna-bloco1								{ width:660px; float:right; }
+.especialista-interna-bloco1-titulo							{ font-size:20px; color:#000; font-weight:600; padding-bottom:20px; }
+.especialista-interna-bloco1-titulo span					{ display:block; font-weight:400; font-size:14px; color:#f73f60; }
+.especialista-interna-bloco1-texto							{ font-size:15px; }
+.especialista-interna-bloco1-botao							{ width:200px; background:#53924d; border-radius:6px; padding:10px 20px; margin-top:20px; text-align:center; color:#FFF; text-transform:uppercase; }
+
+.especialista-logos											{ width:calc(33.333% - 62px); float:left; margin:0px 30px; height:250px; background:center center no-repeat #FFF; background-size:contain; border:0px solid #CCC; border-radius:8px; }
+
+
+.videos-topo												{ height:340px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.videos-topo-titulo											{ padding:20px 100px 20px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; }
+
+.videos-lista												{ padding:60px 0px; }
+.videos-lista-item											{ width:calc(33.333% - 30px); margin:15px; float:left; }
+.videos-lista-item-imagem									{ height:180px; background:center center no-repeat #000; background-size:cover; }
+.videos-lista-item-titulo									{ padding:10px 0px; height:50px; font-size:15px; color:#000; }
+
+
+.eventos-topo												{ height:340px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.eventos-topo-titulo										{ padding:20px 100px 20px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; }
+.eventos-topo-voltar										{ float:right; margin:20px -140px 0px 20px; font-size:15px; color:#FFF; font-weight:600; cursor:pointer; }
+
+.eventos-lista												{ padding:60px 0px; }
+.eventos-lista-item											{ width:calc(50% - 30px); margin:15px; float:left; height:400px; }
+.eventos-lista-item-imagem									{ height:150px; background:center center no-repeat #ebebeb; background-size:cover; }
+.eventos-lista-item-data									{ padding:10px 0px 0px 0px; font-size:13px; color:#000; font-weight:600; color:#53924d; }
+.eventos-lista-item-titulo									{ padding:0px 0px 0px 0px; font-size:17px; color:#000; font-weight:600; }
+.eventos-lista-item-texto									{ font-size:15px; color:#333; }
+.eventos-lista-item-botao									{ width:180px; height:31px; float:right; font-size:15px; text-transform:uppercase; padding-top:9px; background:url(../images/011.png) center center no-repeat; text-align:center; color:#FFF; margin-top:20px; }
+
+.eventos-interna											{ padding:40px 0px; }
+.eventos-interna-bloco1										{ width:calc(100% - 330px); float:left; font-size:15px; }
+.eventos-interna-bloco1 img									{ margin-bottom:15px; }
+.eventos-interna-bloco2										{ width:280px; float:right; border:1px solid #CCC; padding:10px; }
+.eventos-interna-bloco2-titulo								{ font-size:20px; color:#73c04e; font-weight:600; text-transform:uppercase; padding:10px 0px 20px 0px; text-align:center; }
+.eventos-interna-bloco2-info								{ border-top:1px solid #CCC; padding:15px 10px; font-size:14px; }
+.eventos-interna-bloco2-info b								{ display:block; font-size:11px; color:#73c04e; }
+.eventos-interna-bloco2-botao								{ background:#73c04e; text-align:center; padding:15px 0px; color:#FFF; text-transform:uppercase; cursor:pointer; }
+
+
+.planos-topo												{ min-height:430px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.planos-topo-titulo											{ padding:10px 100px 26px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; line-height:24px; }
+.planos-topo-titulo span									{ font-size:14px; color:#53924d; font-weight:600; }
+.planos-topo-texto											{ font-size:15px; color:#FFF; width:500px; float:left; padding:40px 60px; }
+
+.planos-detalhes-item										{ width:calc(50% - 30px); margin:15px; float:left; padding-top:30px; }
+.planos-detalhes-item-titulo								{ font-size:25px; line-height:20px; padding:10px 0px; text-transform:uppercase; font-weight:600; }
+.planos-detalhes-item-texto									{ font-size:15px; }
+
+.planos-contato												{ padding:50px 0px; }
+.planos-contato-titulo										{ font-size:35px; color:#555; text-transform:uppercase; padding:0px 0px 30px 0px; text-align:center; }
+.planos-contato-coluna1										{ width:calc(50% - 5px); float:left; }
+.planos-contato-coluna2										{ width:calc(50% - 5px); float:right; }
+.planos-contato select										{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:15px 10px; width:calc(100% - 0px); font-size:14px; color:#000; outline:none; margin:0px 0px 10px 0px; display:block; border-radius:0px; height:46px; }
+.planos-contato input[type=text]							{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:15px 10px; width:calc(100% - 20px); font-size:14px; color:#000; outline:none; margin:0px 0px 10px 0px; display:block; }
+.planos-contato input[type=submit]							{ border:1px solid #136; border-radius:0px; background:#136; padding:15px 10px; width:calc(100% - 0px); font-size:14px; color:#FFF; outline:none; margin:0px 0px 10px 0px; background:#73c04e; border-color:#73c04e; }
+.planos-contato textarea									{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:15px 10px; width:calc(100% - 20px); font-size:14px; color:#000; outline:none; margin:0px 0px 10px 0px; display:block; height:195px; }
+
+
+.contato-topo												{ height:340px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.contato-topo-titulo										{ padding:20px 100px 20px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; }
+
+.contato													{ padding:50px 0px; }
+.contato-coluna1											{ width:calc(50% - 5px); float:left; }
+.contato-coluna2											{ width:calc(50% - 5px); float:right; }
+.contato select												{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:15px 10px; width:calc(100% - 0px); font-size:14px; color:#000; outline:none; margin:0px 0px 10px 0px; display:block; border-radius:0px; height:46px; }
+.contato input[type=file]									{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:15px 10px; width:calc(100% - 20px); font-size:14px; color:#000; outline:none; margin:0px 0px 10px 0px; display:block; }
+.contato input[type=text]									{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:15px 10px; width:calc(100% - 20px); font-size:14px; color:#000; outline:none; margin:0px 0px 10px 0px; display:block; }
+.contato input[type=submit]									{ border:1px solid #136; border-radius:0px; background:#136; padding:15px 10px; width:calc(100% - 0px); font-size:14px; color:#FFF; outline:none; margin:0px 0px 10px 0px; background:#73c04e; border-color:#73c04e; }
+.contato textarea											{ border:1px solid #CCC; border-radius:0px; background:#FFFFFF; padding:15px 10px; width:calc(100% - 20px); font-size:14px; color:#000; outline:none; margin:0px 0px 10px 0px; display:block; height:254px; }
+
+.contato-mapa1												{ width:calc(50% - 10px); margin:15px 0px; float:left; }
+.contato-mapa2												{ width:calc(50% - 10px); margin:15px 0px; float:right; }
+
+
+.blog-topo													{ height:340px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.blog-topo-titulo											{ padding:20px 100px 20px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; }
+
+.blog-destaque												{ padding-top:20px; }
+.blog-destaque-item											{ width:calc(50% - 30px); margin:15px; float:left; height:350px; background:center center no-repeat #303030; background-size:cover; }
+.blog-destaque-item-info									{ display:none; }
+.blog-destaque-item-info-titulo								{  }
+.blog-destaque-item-info-texto								{  }
+
+.blog-postagens												{ padding-top:40px; }
+.blog-postagens-lista										{  }
+.blog-postagens-lista-item									{ width:calc(50% - 30px); margin:15px; float:left; min-height:160px; }
+.blog-postagens-lista-item-imagem							{ width:160px; height:160px; float:left; background:center center no-repeat; background-size:cover; }
+.blog-postagens-lista-item-titulo							{ margin-left:180px; font-size:20px; color:#000; text-transform:uppercase; }
+.blog-postagens-lista-item-texto							{ margin-left:180px; font-size:14px; color:#808080; }
+.blog-postagens-lista-item-botao							{ margin-left:180px; }
+
+.blog-filtros												{ padding:20px 0px; background:#ebebeb; margin-bottom:20px; }
+.blog-filtros h3											{ text-transform:uppercase; font-size:18px; }
+.blog-filtros-todos											{ min-width:10px; float:left; background:#999; padding:7px 15px; color:#FFF; margin:5px; font-size:16px; }
+.blog-filtros-item											{ min-width:10px; float:left; background:#ccc; padding:7px 15px; color:#FFF; margin:5px; font-size:16px; }
+.blog-filtros-item:hover									{ background:#aaa; }
+
+.blog-interna												{ padding:40px 0px; }
+.blog-interna-bloco1										{ width:calc(100% - 330px); float:left; font-size:15px; }
+.blog-interna-bloco1-titulo									{ font-size:20px; color:#73c04e; font-weight:600; text-transform:uppercase; padding:10px 0px 20px 0px; text-align:left; }
+.blog-interna-bloco1 img									{ margin-bottom:15px; }
+.blog-interna-bloco2										{ width:300px; float:right; }
+.blog-interna-bloco2-titulo									{ font-size:20px; color:#73c04e; font-weight:600; text-transform:uppercase; padding:10px 0px 20px 0px; text-align:left; }
+
+.blog-interna-postagens-lista-item							{ padding-bottom:30px; }
+.blog-interna-postagens-lista-item-imagem					{ height:200px; background:center center no-repeat; background-size:cover; margin-bottom:10px; }
+.blog-interna-postagens-lista-item-titulo					{ font-size:20px; color:#000; text-transform:uppercase; }
+.blog-interna-postagens-lista-item-texto					{ font-size:14px; color:#808080; }
+
+.unidades-interna-topo										{ height:340px; background:url(../images/temp_01.jpg) center top no-repeat; background-size:cover; }
+.unidades-interna-topo-titulo								{ padding:20px 100px 20px 60px; background:url(../images/012.png) right center no-repeat; min-width:10px; float:left; margin-top:240px; color:#555555; font-size:36px; text-transform:uppercase; }
+
+.unidades-interna											{ padding:40px 0px; background:url(../images/022.png) center center no-repeat; background-size:cover; }
+
+.unidades-interna-imagem									{ width:500px; float:left; }
+.unidades-interna-imagem ul								{ margin:0px; padding:0px; list-style:none; }
+.unidades-interna-imagem li								{ margin:0px; padding:0px; list-style:none; }
+.unidades-interna-imagem-item								{ height:400px; background:center center no-repeat #FFF; background-size:cover; }
+
+.unidades-interna-info										{ width:560px; float:right;  }
+.unidades-interna-info a									{ color:#000; }
+.unidades-interna-info a:hover								{ text-decoration:underline; }
+.unidades-interna-info-titulo								{ color:#73c04e; font-size:24px; text-transform:uppercase; }
+.unidades-interna-info-endereco							{ font-size:15px; }
+.unidades-interna-info-contato								{ font-size:15px; padding:15px 0px; }
+.unidades-interna-info-horario								{ font-size:15px; }
+.unidades-interna-info-contato								{ font-size:15px; }
+
+.unidades-interna-especialidades							{ padding:40px 0px; }
+.unidades-interna-especialidades-titulo					{ font-size:35px; color:#555; text-transform:uppercase; padding:0px 0px 30px 0px; text-align:center; }
+.unidades-interna-especialidades-lista					{  }
+.unidades-interna-especialidades-lista-item				{ margin:10px; }
+.unidades-interna-especialidades-lista-item-imagem		{ height:150px; background:right center no-repeat; background-size:cover; }
+.unidades-interna-especialidades-lista-item-nome			{ color:#000; font-size:16px; font-weight:bold; text-transform:uppercase; text-align:center; padding:10px 0px 5px 0px; }
+.unidades-interna-especialidades-lista .bx-prev			{ left:-40px !important; }
+.unidades-interna-especialidades-lista .bx-next			{ right:-40px !important; }
+
+.unidades-interna-equipe									{ padding:40px 0px; }
+.unidades-interna-equipe-titulo							{ font-size:35px; color:#555; text-transform:uppercase; padding:0px 0px 30px 0px; text-align:center; }
+.unidades-interna-equipe-lista								{  }
+.unidades-interna-equipe-lista-item						{ margin:10px; }
+.unidades-interna-equipe-lista-item-imagem				{ height:200px; background:center center no-repeat; background-size:cover; }
+.unidades-interna-equipe-lista-item-nome					{ color:#000; font-size:16px; font-weight:bold; text-transform:uppercase; padding:10px 0px 5px 0px; }
+.unidades-interna-equipe-lista-item-texto					{ color:#f73f60; }
+.unidades-interna-equipe-lista .bx-prev					{ left:-40px !important; }
+.unidades-interna-equipe-lista .bx-next					{ right:-40px !important; }
+
+
+@media (max-width: 980px) {
+
+	.centralizar											{ width:auto; margin:0px auto !important; padding:0px 10px; }
+	
+	.botoes-lateral											{ display:none; }
+	
+	.div01													{ background:none; }
+	.div01-mlbrasil											{ margin:-29px 0px 0px 44px; width:90px; display:none; }
+	.div01-logo												{ width:150px; margin-top:-10px; }
+	.div01-home												{ display:none; }
+	.div01-contato											{ display:none; }
+	.div01-menu												{ display:none; }
+	
+	.div01-mobile-btmenu									{ display:block; width:80px; height:50px; float:right; background:url(../images/020.png) center center no-repeat; }
+	.div01-mobile-menu										{ display:none; background:#53924d; position:absolute; top:64px; left:0px; width:100%; height:308px; overflow:scroll; }
+	.div01-mobile-menu ul									{ margin:0px; padding:0px; list-style:none; }
+	.div01-mobile-menu li									{ margin:0px; padding:0px; list-style:none; display:block; text-align:center; border-top:1px solid #2e6c28; color:#FFF; font-size:17px; padding:10px 0px; }
+	.div01-mobile-menu li a									{ color:#FFF; }
+	.div01-mobile-menu li ul								{ margin-top:10px; background:#43823d; margin-bottom:-10px; display:none; }
+	.div01-mobile-menu li:hover ul							{ display:block; }
+	
+	.div02													{ min-height:500px; }
+	.div02 iframe											{ width:100% !important; height:200px !important; }
+	
+	.div03-unidade											{ width:auto; float:none; padding:10px 0px; }
+	
+	.div04-coluna1											{ margin:0px; border:0px; padding:10px 0px; width:auto; float:none; }
+	.div04-coluna2											{ margin:0px; border:0px; padding:10px 0px; width:auto; float:none; }
+	.div04-coluna3											{ margin:0px; border:0px; padding:10px 0px; width:auto; float:none; }
+	.div04-coluna4											{ margin:0px; border:0px; padding:10px 0px 0px 0px; width:auto; float:none; }
+	.div04-coluna5											{ margin:0px; border:0px; padding:0px 0px 20px 0px; width:auto; float:none; }
+
+	.div04-coluna4-botao									{ display:none; }
+	.div04-coluna4-lateral									{ min-width:10px; float:left; display:block; }
+	.div04-coluna4-lateral-item								{ width:30px; height:30px; border-radius:5px; margin:5px; float:left; background-position:center center !important; background-size:30px !important; }
+
+	.videos-topo											{ height:220px; }
+	.videos-topo-titulo										{ padding:10px 70px 10px 10px; margin-top:120px; font-size:20px; }
+	.videos-lista-item										{ width:auto; float:none; }
+	
+	.eventos-topo											{ height:220px; }
+	.eventos-topo-titulo									{ padding:10px 70px 10px 10px; margin-top:120px; font-size:20px; }
+	.eventos-lista-item										{ width:auto; float:none; height:auto; margin-bottom:100px; }
+	.eventos-topo-voltar									{ margin:7px -140px 0px 10px; }
+	
+	.eventos-interna-bloco1									{ width:auto; float:none; }
+	.eventos-interna-bloco2									{ width:auto; float:none; }
+
+	.especialidade-topo										{  }
+	.especialidade-topo-titulo								{ padding:10px 70px 10px 10px; margin-top:120px; font-size:20px; }
+	.especialidade-topo-texto								{ padding:20px 10px; width:auto; float:none; }
+	.especialidade-topo-texto img							{ width:100%; height:auto; }
+	
+	.especialidade-profissionais-titulo						{ font-size:22px; }
+	.especialidade-profissionais-item 						{ width:auto !important; float:none !important; }
+	
+	.especialidade-profissionais-item1 .especialidade-profissionais-item-imagem		{ width:auto; float:none; height:250px; }
+	.especialidade-profissionais-item1 .especialidade-profissionais-item-nome		{ margin:0px; }
+	.especialidade-profissionais-item1 .especialidade-profissionais-item-formacao	{ margin:0px; }
+	
+	.especialidade-youtube-3								{ margin:10px 0px; }
+	
+	.especialidade-profissionais table						{ display:block; }
+	.especialidade-profissionais tbody						{ display:block; }
+	.especialidade-profissionais tr							{ display:block; }
+	.especialidade-profissionais td							{ display:block; width:100%; margin:10px 0px; padding:10px 0px; }
+	
+	.especialista-topo											{ height:auto; min-height:200px; }
+	.especialista-topo-titulo									{ padding:10px 70px 10px 10px; margin-top:120px; font-size:20px; }
+
+	.especialista-interna										{ padding:20px 0px; }
+	.especialista-interna-imagem								{ width:100%; float:none; margin-bottom:20px; }
+	.especialista-interna-bloco1								{ width:auto; float:none; }
+
+	.especialista-logos											{ width:auto; margin:10px 0px; float:none; height:160px; background:center center no-repeat #FFF; background-size:contain; }
+	
+	.planos-topo											{ height:auto; min-height:320px; }
+	.planos-topo-titulo										{ padding:10px 80px 10px 10px; margin-top:120px; font-size:20px; }
+	.planos-topo-texto										{ padding:20px 10px; width:auto; float:none; }
+	.planos-topo-texto img									{ width:100%; height:auto; }
+	
+	.planos-detalhes-item 									{ width:auto; float:none; }
+	.planos-contato-titulo									{ font-size:22px; }
+	.planos-contato-coluna1									{ width:auto; float:none; }
+	.planos-contato-coluna2									{ width:auto; float:none; }
+	
+	
+	.contato-topo											{ height:220px; }
+	.contato-topo-titulo									{ padding:10px 80px 10px 10px; margin-top:120px; font-size:20px; }
+	.contato-coluna1										{ width:auto; float:none; }
+	.contato-coluna2										{ width:auto; float:none; }
+	.contato-mapa1											{ width:auto; float:none; }
+	.contato-mapa2											{ width:auto; float:none; }
+	.mensagem_obrigado										{ padding:50px 0px; }
+	
+
+	.careclub-topo											{ height:220px; }
+	.careclub-topo-titulo									{ padding:10px 80px 10px 10px; margin-top:120px; font-size:20px; }	
+	
+	.careclub-comecou										{ height:auto; background-position:-180px top; background-size:1350px; padding-top:220px; }
+	.careclub-comecou-info									{ width:auto; float:none; }
+
+	.careclub-proposta										{ height:auto; background:#FFF; }
+	.careclub-proposta-video								{ width:auto; float:none; margin-top:20px; }
+	.careclub-proposta-video iframe							{ width:100% !important; height:240px !important; }
+	.careclub-proposta-info									{ width:auto; float:none; }
+	.careclub-proposta-info-titulo							{ font-size:24px; padding:20px 0px 10px 0px; }
+
+	.careclub-espaco-info									{ width:auto; float:none; }
+	.careclub-espaco-unidade1								{ width:auto; float:none; padding:0px; background:none; margin:20px 0px 0px 0px; height:auto; }
+	.careclub-espaco-unidade2								{ width:auto; float:none; padding:0px; background:none; margin:20px 0px 0px 0px; height:auto; }
+	
+	.careclub-depoimentos .bx-prev							{ left:50px !important; margin-top:-190px !important; }
+	.careclub-depoimentos .bx-next							{ right:50px !important; margin-top:-190px !important; }
+	
+
+	.blog-topo												{ height:220px; }
+	.blog-topo-titulo										{ padding:10px 80px 10px 10px; margin-top:120px; font-size:20px; }	
+	
+	.blog-destaque-item										{ width:auto; float:none; margin:10px 0px; height:240px; margin-bottom:20px; }
+	.blog-postagens-lista-item								{ width:auto; float:none; margin:10px 0px; }
+	.blog-postagens-lista-item-imagem						{ width:auto; float:none; height:240px; }
+	.blog-postagens-lista-item-titulo						{ margin-left:0px; }
+	.blog-postagens-lista-item-texto						{ margin-left:0px; margin-bottom:20px; }
+	
+	.blog-interna-bloco1									{ width:auto; float:none; margin:0px; }
+	.blog-interna-bloco2									{ width:auto; float:none; margin:0px; }
+	
+	
+	.home-banner-item										{ background-size:540px; background-position:center 100px; }
+	.home-banner-item-texto									{ width:auto; float:none; padding:0px; background:none; font-size:30px; margin-top:120px; }
+	.home-banner-item-obs									{ margin-top:58px; }
+	
+	.home-bloco1											{ height:auto; background:#FFF; padding-bottom:80px; }
+	.home-bloco1-video										{ width:auto; float:none; margin-top:20px; }
+	.home-bloco1-video iframe								{ width:100% !important; height:240px !important; }
+	.home-bloco1-info										{ width:auto; float:none; }
+	.home-bloco1-info-titulo								{ font-size:24px; padding:20px 0px 10px 0px; }
+	
+	.home-bloco2											{ height:auto; padding-bottom:20px; }
+	.home-bloco2-titulo										{ font-size:24px; padding:30px 0px 0px 0px; }
+	.home-bloco2-imagem										{ display:none; }
+	.home-bloco2-mobile										{ display:block; }
+	.home-bloco2-mobile-item								{ margin:10px; }
+	.home-bloco2-mobile-item-imagem							{ width:100%; height:auto; }
+	.home-bloco2-mobile-item-titulo							{ text-align:center; padding:10px 0px; color:#FFF; background:#414141; font-weight:700; font-size:15px; }
+	.home-bloco2-mobile-item-titulo span					{ font-weight:400; font-size:13px; }
+	
+	.home-bloco3											{ height:auto; }
+	.home-bloco3-eventos									{ width:auto; float:none; }
+	.home-bloco3-video										{ width:auto; float:none; }
+
+	.home-bloco4											{ height:auto; }	
+	.home-bloco4-fundo2										{ height:auto; }	
+	.home-bloco4-imagem										{ display:none; }
+	.home-bloco4-mobile										{ display:block; }
+	.home-bloco4-mobile-item								{ padding:15px 0px; text-align:center; color:#FFF; font-size:20px; }
+	
+	.home-bloco4-planos										{ display:none; }
+	
+	.home-bloco5-item										{ background-size:contain; }	
+
+	
+	.paginacao												{ width:260px; }
+	.paginacao-indice										{ display:none; }
+	
+	.unidades-interna-imagem								{ width:auto; float:none; }
+	.unidades-interna-info									{ width:auto; float:none; margin-top:20px; }
+	.unidades-interna-especialidades-titulo				{ font-size:30px; }
+	.unidades-interna-equipe-titulo						{ font-size:30px; }
+	.unidades-interna-topo												{ height:220px; }
+	.unidades-interna-topo-titulo							{ padding:10px 80px 10px 10px; margin-top:120px; font-size:20px; }
+	
+
+
+	
+}
+
+
